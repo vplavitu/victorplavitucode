@@ -1,0 +1,35 @@
+//homework 2
+//circles increasing and decreasing in size as color is random
+//victor plavitu
+void setup() {
+  size(800, 800);
+  noStroke();
+  colorMode(RGB, width, height, height);
+  ellipseMode(CENTER);
+  background(mouseX/8, mouseY/8, 50, 100);
+}
+
+void draw() {
+  
+  float r = random (0,255);
+  float r1 = map(mouseX, 0, width, 0, height);
+  float r2 = height-r1;
+  float r3 = height-r2;
+  //float r4 = height-r3;
+  
+  fill(random(0,255) ,random(0,255),random(0,255));
+  ellipse(width/2 + r1/2, height/2, r1, r1);
+  
+  fill(random(0,255) ,random(0,255),random(0,255));
+  ellipse(width/2 - r2/2, height/2, r2, r2);
+  
+  //fill(r3);
+  //ellipse(width/2 + r3/3, height/2, r1, r1);
+  
+  //fill(r4);
+  //ellipse(width/1 - r3/3, height/2, r3, r3);
+  
+  line(mouseX-66, mouseY, mouseX+66, mouseY);
+  line(mouseX, mouseY-66, mouseX, mouseY+66); 
+
+}
