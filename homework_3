@@ -1,0 +1,38 @@
+//Ill be honest guys, i stuggled with this assignment 
+//this one is poopy :(
+
+void setup() {
+  size(800, 800);
+  noStroke();
+  fill(0, 82, 165);
+  frameRate(8);
+}
+
+void draw() {
+
+  background(0, 82, 165);
+
+
+  fill(random(0, 255), random(0, 255), random(0, 255));
+  if ((mouseX <= 400) && (mouseY <= 400)) {
+    rect(0, 0, 400, 400); // Upper-left
+  } else if ((mouseX <= 400) && (mouseY > 400)) {
+    rect(0, 400, 400, 400); // Lower-left
+    rect(0, 0, 400, 400); // Upper-left
+    rect(400, 400, 400, 400); // Lower-right
+    rect(400, 400, 200, 200);
+  } else if ((mouseX > 400) && (mouseY <= 400)) {
+    rect(400, 0, 400, 400); // Upper-right
+    {
+      fill(0, 197, 144);
+    }
+  } else {
+    rect(400, 400, 400, 400); // Lower-right
+    fill(random(0, 255), random(0, 255), random(0, 255));
+    rect(0, 0, 400, 400); // Upper-left
+  
+
+}
+  
+  
+}
