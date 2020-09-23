@@ -1,0 +1,201 @@
+//homework 4 Victor Plavitu
+//inspired by exercise on The Coding Train 8.5: More On Objects
+//Work Titled: monochromatic world
+//colors used are blue, red, green, yellow
+//please note there is a 2nd tab titled particle to make this code work
+
+//move cursor within cicles to change color
+
+Particle p1;
+Particle p2; //cursor
+Particle p3;
+Particle p4;
+Particle p5;
+Particle p6;
+Particle p7;
+Particle p8;
+Particle p9;
+Particle p10;
+Particle p11;
+Particle p12;
+Particle p13;
+Particle p14;
+Particle p15;
+Particle p16;
+Particle p17;
+Particle p18;
+Particle p19;
+Particle p20;
+Particle p21;
+Particle p22;
+Particle p23;
+Particle p24;
+Particle p25;
+
+void setup() {
+  size(800, 800);
+  p1 = new Particle(200, 200, 50); //blue
+  p2 = new Particle(500, 200, 10); //cursor
+  p3 = new Particle(200, 200, 75); //blue
+  p4 = new Particle(200, 200, 25); //blue
+  p5 = new Particle(200, 200, 100); //blue
+  p6 = new Particle(200, 200, 125); //blue
+  p7 = new Particle(200, 200, 150); //blue
+
+  p8 = new Particle(600, 200, 25); //red
+  p9 = new Particle(600, 200, 50); //red
+  p10 = new Particle(600, 200, 75); //red
+  p11 = new Particle(600, 200, 100); //red
+  p12 = new Particle(600, 200, 125); //red
+  p13 = new Particle(600, 200, 150); //red
+
+  p14 = new Particle(600, 600, 25); //green
+  p15 = new Particle(600, 600, 50); //green
+  p16 = new Particle(600, 600, 75); //green
+  p17 = new Particle(600, 600, 100); //green
+  p18 = new Particle(600, 600, 125); //green
+  p19 = new Particle(600, 600, 150); //green
+
+  p20 = new Particle(200, 600, 25); //yellow
+  p21 = new Particle(200, 600, 50); //yellow
+  p22 = new Particle(200, 600, 75); //yellow
+  p23 = new Particle(200, 600, 100); //yellow
+  p24 = new Particle(200, 600, 125); //yellow
+  p25 = new Particle(200, 600, 150); //yellow
+}
+
+void draw() {
+  background(100);
+  textSize(30);
+  text("Hover mouse over targets", 200, 410 ); 
+  text("to change color", 275, 440 ); 
+
+
+  //yellow family
+  if (p2.overlaps(p25)) {
+    background(184, 176, 147);
+  }
+
+  if (p2.overlaps(p24)) {
+    background(194, 182, 136);
+  }
+
+  if (p2.overlaps(p23)) {
+    background(214, 196, 122);
+  }
+
+  if (p2.overlaps(p22)) {
+    background(232, 210, 121);
+  }
+  if (p2.overlaps(p21)) {
+    background(232, 200, 74);
+  }
+  if (p2.overlaps(p20)) {
+    background(255, 230, 0);
+  }
+  //green family
+  if (p2.overlaps(p19)) {
+    background(133, 153, 135);
+  }
+
+  if (p2.overlaps(p18)) {
+    background(128, 171, 132);
+  }
+
+  if (p2.overlaps(p17)) {
+    background(118, 196, 126);
+  }
+
+  if (p2.overlaps(p16)) {
+    background(101, 230, 114);
+  }
+  if (p2.overlaps(p15)) {
+    background(78, 245, 95);
+  }
+  if (p2.overlaps(p14)) {
+    background(0, 255, 26);
+  }
+  //red family
+  if (p2.overlaps(p13)) {
+    background(181, 161, 161);
+  }
+
+  if (p2.overlaps(p12)) {
+    background(199, 155, 155);
+  }
+
+  if (p2.overlaps(p11)) {
+    background(219, 156, 156);
+  }
+
+  if (p2.overlaps(p10)) {
+    background(245, 134, 134);
+  }
+  if (p2.overlaps(p9)) {
+    background(255, 66, 66);
+  }
+  if (p2.overlaps(p8)) {
+    background(255, 0, 0);
+  }
+
+
+  //blue family
+  if (p2.overlaps(p7)) {
+    background(170, 174, 181);
+  }
+
+  if (p2.overlaps(p6)) {
+    background(155, 168, 196);
+  }
+
+  if (p2.overlaps(p5)) {
+    background(145, 164, 255);
+  }
+
+  if (p2.overlaps(p3)) {
+    background(97, 123, 255);
+  }
+  if (p2.overlaps(p1)) {
+    background(46, 81, 255);
+
+    if (p2.overlaps(p4)) {
+      background(0, 42, 255);
+    }
+  }
+
+  p2.x = mouseX;
+  p2.y = mouseY;
+
+  //red
+  p1.display();
+  p2.display();
+  p3.display();
+  p4.display();
+  p5.display();
+  p6.display();
+  p7.display();
+
+  //blue
+  p8.display();
+  p9.display();
+  p10.display();
+  p11.display();
+  p12.display();
+  p13.display();
+
+  //green
+  p14.display();
+  p15.display();
+  p16.display();
+  p17.display();
+  p18.display();
+  p19.display();
+
+  //yellow
+  p20.display();
+  p21.display();
+  p22.display();
+  p23.display();
+  p24.display();
+  p25.display();
+}
